@@ -43,5 +43,5 @@ jobs:
         if [ -f D_SCIENCE/PYTHON/requirements.txt ]; then pip install -r D_SCIENCE/PYTHON/requirements.txt; fi
     - name: Test with unittest and coverage
       run: |
-        coverage run --rcfile= D_SCIENCE/PYTHON/.coveragerc -m unittest discover D_SCIENCE/PYTHON
-        coverage report --rcfile= D_SCIENCE/PYTHON/.coveragerc --fail-under=90 -m
+        coverage run --rcfile=D_SCIENCE/PYTHON/.coveragerc -m unittest discover D_SCIENCE/PYTHON
+        coverage report --rcfile=D_SCIENCE/PYTHON/.coveragerc --fail-under=90 -m
