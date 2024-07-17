@@ -20,13 +20,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8
-        if [ -f D_Science/Python/requirements.txt ]; then pip install -r D_Science/Python/requirements.txt; fi
+        if [ -f D_SCIENCE/PYTHON/requirements.txt ]; then pip install -r D_SCIENCE/PYTHON/requirements.txt; fi
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
-        flake8 D_Science/Python --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8  D_SCIENCE/PYTHON --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 D_Science/Python --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        flake8  D_SCIENCE/PYTHON --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
   test:
     runs-on: ubuntu-latest
@@ -40,7 +40,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install coverage
-        if [ -f D_Science/Python/requirements.txt ]; then pip install -r D_Science/Python/requirements.txt; fi
+        if [ -f D_SCIENCE/PYTHON/requirements.txt ]; then pip install -r D_SCIENCE/PYTHON/requirements.txt; fi
     - name: Test with unittest and coverage
       run: |
-        coverage run -m unittest discover D_Science/Python && coverage report -m
+        coverage run -m unittest discover D_SCIENCE/PYTHON && coverage report -m
