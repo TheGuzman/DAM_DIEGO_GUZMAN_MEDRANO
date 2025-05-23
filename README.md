@@ -12,5 +12,9 @@ Estructura de carpetas:
 │   │   ├── test // test ejercicios de python
 │   │
 │   └── SQL // Ejercicios SQL
-└── README.md
+│   │
+|   |
+│   └── POWER_BI // Ejercicios de POWER_BI
+└──
+ README.md
 ```
